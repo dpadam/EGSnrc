@@ -1242,8 +1242,8 @@ if { (eval $test_compile) 2>&5; test_status=$?; (exit $test_status); }; then
     long_integer="integer*8"
 else
     echo "no" >&2
-    long_integer="integer*4"
-    the_max_int="REPLACE {\$MAX_INT} WITH {2147483647.}"
+    long_integer="integer*8"
+#    the_max_int="REPLACE {\$MAX_INT} WITH {2147483647.}"
 fi
 rm -f junk_file conftest.$test_ext conftest$test_exeext
 

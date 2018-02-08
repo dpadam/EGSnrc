@@ -75,7 +75,7 @@ rname_bo="-N"
 # jobs are submitted quickly. A sleep time of 1 second is sufficient
 # on out system,
 #
-batch_sleep_time=1
+batch_sleep_time=10
 
 # Some queueing systems (e.g. PBS) have a limitation on the
 # maximum length of a job name (e.g. for PBS this is 15).
@@ -88,8 +88,8 @@ batch_mnl=15
 # The 3 PBS queues that we have here at NRC.
 # Change these if you have defined different queues.
 #
-short_queue="-q short"
-long_queue="-q long"
+short_queue="-q Q_1"
+long_queue="-q Q_2"
 user1_queue="-q user1"
 user2_queue="-q user2"
 user3_queue="-q user3"

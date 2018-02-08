@@ -272,7 +272,7 @@ REPLACE {$IAEA_SET_PHSP_RECORD(#,#);} WITH {;
 iaea_dummy_long={P2};
 call iaea_set_record({P1},iaea_dummy_long,iaea_result);
 IF(iaea_result<0)[
-    WRITE(i_log,*)' Error going to record ',{P2},' in IAEA phsp file.';
+    WRITE(i_log,*)' Error going to record ',{P2},'  ',iaea_result;
     $CALL_EXIT(1);
 ]
 }

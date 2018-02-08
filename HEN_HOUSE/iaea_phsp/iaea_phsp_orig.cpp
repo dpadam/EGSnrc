@@ -962,9 +962,9 @@ void iaea_set_parallel(const IAEA_I32 *id, const IAEA_I32 *i_parallel,
    offset   Number of bytes from origin
    origin   Initial position
    */
-   if( fseeko(p_iaea_record[*id]->p_file, offset ,SEEK_SET) == 0)
+   if( fseek(p_iaea_record[*id]->p_file, offset ,SEEK_SET) == 0)
    {
-         IAEA_I32 pos = ftello(p_iaea_record[*id]->p_file);
+         IAEA_I32 pos = ftell(p_iaea_record[*id]->p_file);
       // IAEA_I64 pos = (IAEA_I64)ftell(p_iaea_record[*id]->p_file); // changed, May 2011
          *result = 0;
          return;
@@ -1120,9 +1120,9 @@ void iaea_set_record(const IAEA_I32 *id, const IAEA_I64 *record_num,
    origin   Initial position
    */
 
-   if( fseeko(p_iaea_record[*id]->p_file, offset ,SEEK_SET) == 0)
+   if( fseek(p_iaea_record[*id]->p_file, offset ,SEEK_SET) == 0)
    {
-         IAEA_I32 pos = ftello(p_iaea_record[*id]->p_file);
+         IAEA_I32 pos = ftell(p_iaea_record[*id]->p_file);
          *result = 0;
          return;
    }
